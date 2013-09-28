@@ -5,10 +5,9 @@ This application is basically a simple User Input Form that takes input from use
 
 <b>[Download the source code from git.](https://github.com/shephertz/App42PaaS-Php-PostgreSQL-Sample/archive/master.zip)</b>
 
+
 Project Configuration:
 ----------------------
-
-In order to configure this application following steps are to be done:
 
 1. Open Config.properties.
 
@@ -19,19 +18,38 @@ In order to configure this application following steps are to be done:
          app42.paas.db.password = <your_database_password>
          app42.paas.db.ip = <your_service_ip>
          app42.paas.db.name = <your_database_name>
+		 
 
-3. Make the binary of this Application and start deploying your app on App42PaaS.
-        
-         $ app42 deploy
-         $ Enter App Name: <your_app_name>
-         $ Would you like to deploy from the current directory? [Yn]: n
-         $ Binary Deployment Path: <your_binary_path>
-         $ This process may take a while, be patient with it.
-         $ Deploying Application... OK
-         $ Please wait it may take few minutes.
-         $ Latest Status....|
-         $ App deployed successfully.
+Deploying Application on App42 PaaS using Binary:
+---------------------------------------------------
+         
+		1. Create the binary(zip, tar.gz) file.
+		
+		2. Run the app42 deploy command.
+		
+				  $ app42 deploy
+                  $ Enter App Name: <your_app_name>
+                  $ Would you like to deploy from the current directory? [Yn]: n
+                  $ Binary Deployment Path: <your_binary_path>
+                  $ This process may take a while, be patient with it.
+                  $ Deploying Application... OK
+                  $ Please wait it may take few minutes.
+                  $ Latest Status....|
+                  $ App deployed successfully.
+				  
 
+Deploying Application on App42 PaaS using Source (Git):
+--------------------------------------------------------
 
-
-
+	1. Run the app42 deploy command.
+	
+				  $ app42 deploy
+                  $ Enter App Name: <your_app_name>
+				  $ 1: Binary
+				  $	2: Source
+				  $ Choose Upload Type [Binary]: 2
+				  $ Enter Git URL?: <your_public_git_url>
+				  $ Deploying Application... OK
+                  $ Please wait it may take few minutes.
+                  $ Latest Status....|
+                  $ App deployed successfully.
